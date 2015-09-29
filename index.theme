@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Mac-XBuntu
+Comment=Mac-XBuntu theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Mac-XBuntu
+MetacityTheme=Mac-XBuntu
+ButtonLayout=close,minimize,maximize:

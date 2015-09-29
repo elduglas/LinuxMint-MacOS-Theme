@@ -1,0 +1,83 @@
+UnityDecoration {
+    -UnityDecoration-extents: 28px 0 0 0;
+    -UnityDecoration-input-extents: 10px;
+
+    -UnityDecoration-shadow-offset-x: 1px;
+    -UnityDecoration-shadow-offset-y: 5px;
+    -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.75);
+    -UnityDecoration-active-shadow-radius: 30px;
+    -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.3);
+    -UnityDecoration-inactive-shadow-radius: 25px;
+
+    -UnityDecoration-glow-size: 10px;
+    -UnityDecoration-glow-color: rgb (221, 72, 20);
+
+    -UnityDecoration-title-indent: 10px;
+    -UnityDecoration-title-fade: 35px;
+    -UnityDecoration-title-alignment: 0.0;
+}
+
+UnityDecoration.top {
+    border: 1px solid rgba (0, 3, 5, 0.03); /* shade (@dark_bg_color, 1.04) - shade (@dark_bg_color, 1.5) */
+    border-bottom-width: 0;
+    border-radius: 6px 6px 0 0;
+    padding: 1px 6px 0 6px;
+    color: @fg_color;
+    text-shadow: none;
+    background-clip: border-box;
+     background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (#fafafa),
+                                     to (#e3e3e3));
+    color: 						@os_chrome_fg_color;
+}
+
+
+UnityDecoration.left,
+UnityDecoration.right {
+    background-color: shade (@bg_color, 0.7);
+    background-size: 1px 70px;
+    background-repeat: repeat-x;
+
+    /* start color: mix of the top border color and bg-image gradient end */
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     color-stop (0, #2b2a2a),
+                                     color-stop (0.5, #373632),
+                                     color-stop (1, shade (@bg_color, 0.7)));
+}
+
+UnityPanelWidget,
+.unity-panel {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade(@theme_bg_dark_color, 1.5)),                                     
+                                     to   (shade(@theme_bg_dark_color, 1.05)));
+
+    border-width: 0px;
+    border-style: none;
+
+}
+
+.unity-panel.menubar,
+.unity-panel .menubar {
+    color: @theme_text_dark_color;
+	text-shadow: @theme_shadow_dark_color;
+}
+
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+    border-width: 0px;
+
+    /* icon-shadow: 0 1 shade (@bg_color, 1.06); */
+}
+
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem *:hover {
+  
+
+    color: @selected_fg_color;
+
+
+}
+
+
